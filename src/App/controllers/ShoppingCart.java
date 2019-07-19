@@ -1,6 +1,5 @@
 package App.controllers;
 
-import App.App;
 import App.models.Product;
 import App.repositories.ProductsRepository;
 

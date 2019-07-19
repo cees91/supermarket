@@ -3,7 +3,6 @@ package App.models;
 public class Product {
     private double price;
     private String name;
-    private Discount discount;
 
     public int getAmount() {
         return amount;
@@ -17,7 +16,6 @@ public class Product {
     public Product(String name, double price){
         this.price = price;
         this.name = name;
-        this.discount = discount;
     }
     public double calculateDiscount(int numberOfProducts){
         return this.price * numberOfProducts;
@@ -30,9 +28,6 @@ public class Product {
         return name;
     }
 
-    public Discount getDiscount() {
-        return discount;
-    }
 
 
 

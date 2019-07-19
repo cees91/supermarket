@@ -54,7 +54,7 @@ public class SuperMarket {
 
     private String checkCart(){
         ProductsRepository repo = ProductsRepository.getInstance();
-        ArrayList<Product> productList = repo.listProducts();
+        ArrayList<Product> productList = this.cart.listProducts();
         Set set = new HashSet();
         set.addAll(productList);
         String terminalScreen = "Shopping cart: \n";
