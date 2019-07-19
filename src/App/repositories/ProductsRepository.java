@@ -13,8 +13,17 @@ public class ProductsRepository {
     public void addProduct(Product product){
         this.productList.add(product);
     }
-    public void removeProduct(Product product){
+    public void removeProduct(Product product) throws Exception{
         this.productList.remove(product);
+    }
+    public int countProductType(Product product){
+        int count = 0;
+        for(Product currentProduct: this.productList){
+            if(currentProduct.getName().equals(product.getName())){
+                count++;
+            }
+        }
+        return count;
     }
     public ArrayList<Product> listProducts(){
         return this.productList;
