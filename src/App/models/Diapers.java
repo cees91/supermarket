@@ -7,11 +7,17 @@ public class Diapers extends Product {
     @Override
     public double calculateDiscount(int numberOfDiapers){
         double cost = 0;
-        if(numberOfDiapers == 4){
-            cost = super.getPrice()* 3;
-        } else{
-            cost = super.getPrice() *numberOfDiapers;
+        int discountSet= 0;
+        int iterator = 0;
+        for(int i = 0; i < numberOfDiapers+1; i++){
+            iterator ++;
+            if(i % 4 == 0 && i != 0){
+                discountSet ++;
+            }
         }
+        int restDiapers = numberOfDiapers - (discountSet * 4);
+        cost = super.getPrice() * (numberOfDiapers - discountSet);
+        System.out.println(cost);
         return cost;
     }
 }

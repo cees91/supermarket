@@ -16,7 +16,7 @@ public class Kwark extends Product{
         DayOfWeek dow = date.getDayOfWeek();
         String dayName = dow.getDisplayName(TextStyle.FULL, Locale.ENGLISH);
         if(dayName.equals("Wednesday")){
-            cost = 1* numberOfKwarks;
+            cost = 1 * numberOfKwarks;
         } else{
             cost = super.getPrice() * numberOfKwarks;
         }
