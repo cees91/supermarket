@@ -7,9 +7,11 @@ public class Robijn extends Product{
     @Override
     public double calculateDiscount(int numberOfRobijn){
         double cost = 0;
-        if(numberOfRobijn % 2 == 0){
-            cost = super.getPrice() * 0.69;
-        }
+        int remaining = numberOfRobijn /2;
+        int modulus = numberOfRobijn % 2;
+        int floor = Math.round(remaining);
+        cost += (floor* super.getPrice()) * 0.69;
+        cost += (modulus * super.getPrice());
         return cost;
 
     }
